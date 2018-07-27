@@ -18,39 +18,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-0i-mpP">
-                                <rect key="frame" x="130.5" y="374" width="113" height="30"/>
-                                <state key="normal" title="Update Location"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bUE-m7-cP1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-0i-mpP">
+                                <rect key="frame" x="16" y="607" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xxu-lj-yce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Update Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Px1-yb-mGX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5q-e2-CwQ">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bUE-m7-cP1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
-                            </mapView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEk-pG-NHR">
+                                <rect key="frame" x="37" y="30" width="300" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5q-e2-CwQ">
+                                        <rect key="frame" x="117.5" y="15" width="65.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="E5q-e2-CwQ" firstAttribute="centerY" secondItem="uEk-pG-NHR" secondAttribute="centerY" id="Rzv-kc-QiM"/>
+                                    <constraint firstAttribute="height" constant="50" id="Smz-NC-PL8"/>
+                                    <constraint firstItem="E5q-e2-CwQ" firstAttribute="centerX" secondItem="uEk-pG-NHR" secondAttribute="centerX" id="X5W-Ef-FkC"/>
+                                    <constraint firstAttribute="width" constant="300" id="n01-3f-7YF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uEk-pG-NHR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="921-DX-zpR"/>
                             <constraint firstItem="bUE-m7-cP1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B1B-1A-HKM"/>
-                            <constraint firstItem="cNZ-0i-mpP" firstAttribute="top" secondItem="E5q-e2-CwQ" secondAttribute="bottom" constant="30" id="G0m-sb-jCK"/>
-                            <constraint firstItem="E5q-e2-CwQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZJ-Qq-JnF"/>
+                            <constraint firstItem="cNZ-0i-mpP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DeT-rS-76d"/>
+                            <constraint firstItem="uEk-pG-NHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MIw-gc-QMY"/>
                             <constraint firstItem="bUE-m7-cP1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VAF-Fm-6ic"/>
-                            <constraint firstItem="E5q-e2-CwQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XKq-40-LlA"/>
-                            <constraint firstItem="E5q-e2-CwQ" firstAttribute="top" secondItem="bUE-m7-cP1" secondAttribute="bottom" constant="8" id="bJu-ty-BXn"/>
+                            <constraint firstAttribute="bottom" secondItem="bUE-m7-cP1" secondAttribute="bottom" id="bJu-ty-BXn"/>
                             <constraint firstItem="bUE-m7-cP1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fqh-Cc-MOq"/>
-                            <constraint firstItem="cNZ-0i-mpP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hoq-w9-4u8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cNZ-0i-mpP" secondAttribute="trailing" constant="16" id="hKY-ac-rO5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cNZ-0i-mpP" secondAttribute="bottom" constant="10" id="pZc-y8-EyF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="cNZ-0i-mpP" id="ySj-r3-xde"/>
                         <outlet property="locationLabel" destination="E5q-e2-CwQ" id="jQE-k8-bsh"/>
                         <outlet property="map" destination="bUE-m7-cP1" id="I8F-V8-zJH"/>
+                        <outlet property="nameView" destination="uEk-pG-NHR" id="ycw-OF-hct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

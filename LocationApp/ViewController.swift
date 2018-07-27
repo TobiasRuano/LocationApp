@@ -14,6 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     let manager = CLLocationManager()
     
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var locationLabel: UILabel!
     var lugar = ""
@@ -28,11 +30,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
+        style()
     }
 
     @IBAction func updateLocation(_ sender: UIButton) {
         setMap(longitud, latitud)
         locationLabel.text = lugar
+    }
+    
+    func style() {
+        nameView.layer.cornerRadius = 8
+        nameView.layer.shadowColor = UIColor.gray.cgColor
+        nameView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        nameView.layer.shadowOpacity = 10
+        button.layer.cornerRadius = 8
+        button.layer.shadowColor = UIColor.gray.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
+        button.layer.shadowOpacity = 10
     }
     
     func fetchCityAndCountry(location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
