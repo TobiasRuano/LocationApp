@@ -32,6 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var latitud = CLLocationDegrees()
     var fetchedLocation = CLLocation()
     
+    @IBOutlet weak var addNewPlaceButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         sideMenuView.layer.shadowOpacity = 10
         
         settingsButton.layer.cornerRadius = 8
+        addNewPlaceButton.layer.cornerRadius = 8
         
         backgroundView.alpha = 0
     }
@@ -114,7 +116,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func showMenu(_ sender: UIButton) {
         
         if (menuShowing) {
-            self.sideMenuLeadingConstraint.constant = -150
+            self.sideMenuLeadingConstraint.constant = -250
             
             UIView.animate(withDuration: 0.2) {
                 self.backgroundView.alpha = 0
