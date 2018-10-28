@@ -108,7 +108,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let region: MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
         map.setRegion(region, animated: true)
-        
         self.map.showsUserLocation = true
     }
     

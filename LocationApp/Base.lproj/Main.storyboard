@@ -183,7 +183,7 @@
         <!--Side Menu Table View Controller-->
         <scene sceneID="QWd-sq-HBw">
             <objects>
-                <tableViewController id="6ZJ-3j-z3c" customClass="SideMenuTableViewController" customModule="LocationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SideMenuTableViewController" id="6ZJ-3j-z3c" customClass="SideMenuTableViewController" customModule="LocationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OSX-Pb-i5Y">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
